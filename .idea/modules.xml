@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidAutoHelloWorld.iml" filepath="$PROJECT_DIR$/AndroidAutoHelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-auto-play.iml" filepath="$PROJECT_DIR$/android-auto-play.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/odb-java-api/odb-java-api.iml" filepath="$PROJECT_DIR$/odb-java-api/odb-java-api.iml" />
     </modules>
