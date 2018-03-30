@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.github.pires.obd.commands.protocol.AutoFormattingOnCommand;
 import com.github.pires.obd.commands.protocol.EchoOffCommand;
 import com.github.pires.obd.commands.protocol.LineFeedOffCommand;
 import com.github.pires.obd.commands.protocol.ObdResetCommand;
@@ -138,6 +139,7 @@ public class ObdGatewayService extends AbstractGatewayService {
      */
     queueJob(new ObdCommandJob(new EchoOffCommand()));
     queueJob(new ObdCommandJob(new LineFeedOffCommand()));
+    queueJob(new ObdCommandJob(new AutoFormattingOnCommand()));
     queueJob(new ObdCommandJob(new TimeoutCommand(62)));
 
     // Get protocol from preferences
