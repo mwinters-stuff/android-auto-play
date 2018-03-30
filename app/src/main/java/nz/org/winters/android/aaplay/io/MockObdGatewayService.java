@@ -66,7 +66,7 @@ public class MockObdGatewayService extends AbstractGatewayService {
    */
   protected void executeQueue() {
     Log.d(TAG, "Executing queue..");
-    long tick = System.currentTimeMillis();
+
     while (!Thread.currentThread().isInterrupted()) {
       ObdCommandJob job = null;
       try {
@@ -98,10 +98,6 @@ public class MockObdGatewayService extends AbstractGatewayService {
         Thread.currentThread().interrupt();
       }
 
-      if (System.currentTimeMillis() - tick >= 1000) {
-        queueJob(new ObdCommandJob(new AmbientAirTemperatureCommand()));
-        tick = System.currentTimeMillis();
-      }
 
     }
     Log.d(TAG, "Exiting queue processor..");

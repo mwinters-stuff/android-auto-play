@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".MainFragment">
+
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/bluetooth_device_form"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/text_bluetooth_device"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <Button
+                android:id="@+id/button_bluetooth_device"
+                style="?android:textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_height="47dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/select_bluetooth_adapter"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_bluetooth_device"/>
+
+
+            <Button
+                android:id="@+id/button_connect"
+                style="?android:textAppearanceSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/connect"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/button_bluetooth_device"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/button_bluetooth_device"
+                app:layout_constraintTop_toBottomOf="@+id/button_bluetooth_device"/>
+
+            <TextView
+                android:id="@+id/textViewVINLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/VIN"
+
+                app:layout_constraintStart_toStartOf="@+id/button_connect"
+                app:layout_constraintTop_toBottomOf="@+id/button_connect"/>
+
+            <TextView
+                android:id="@+id/textViewVIN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewVINLabel"
+                app:layout_constraintStart_toEndOf="@+id/textViewVINLabel"
+                tools:text="34"/>
+
+            <TextView
+                android:id="@+id/textViewATLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/ambient_temperature"
+
+                app:layout_constraintStart_toStartOf="@+id/button_connect"
+                app:layout_constraintTop_toBottomOf="@+id/textViewVIN"/>
+
+            <TextView
+                android:id="@+id/textViewAT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewATLabel"
+                app:layout_constraintStart_toEndOf="@+id/textViewATLabel"
+                tools:text="34"/>
+
+            <TextView
+                android:id="@+id/textViewSPDLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/speed"
+
+                app:layout_constraintStart_toStartOf="@+id/button_connect"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAT"/>
+
+            <TextView
+                android:id="@+id/textViewSPD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewSPDLabel"
+                app:layout_constraintStart_toEndOf="@+id/textViewSPDLabel"
+                tools:text="34"/>
+
+            <TextView
+                android:id="@+id/textViewBATLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/bat_remain"
+
+                app:layout_constraintStart_toStartOf="@+id/button_connect"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSPD"/>
+
+            <TextView
+                android:id="@+id/textViewBAT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewBATLabel"
+                app:layout_constraintStart_toEndOf="@+id/textViewBATLabel"
+                tools:text="34"/>
+
+
+            <TextView
+                android:id="@+id/textViewBSLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:layout_marginStart="8dp"
+                android:text="@string/bluetooth_status"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/button_connect"
+                />
+
+
+            <TextView
+                android:id="@+id/textViewBS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewBSLabel"
+                app:layout_constraintStart_toEndOf="@+id/textViewBSLabel"
+                tools:text="34"/>
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -17,12 +17,17 @@ android {
 //            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 def AAVersion = '4.4.0'
 dependencies {
+    implementation 'com.android.support:support-v4:27.1.0'
     annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
     implementation "org.androidannotations:androidannotations-api:$AAVersion"
-
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.0'
     implementation 'com.android.support:design:27.1.0'
@@ -33,5 +38,5 @@ dependencies {
     })
     implementation 'com.github.martoreto:aauto-sdk:v4.6'
     implementation project(':odb-java-api')
-    implementation "com.github.k0shk0sh:PermissionHelper:1.1.0"
+    implementation 'com.github.k0shk0sh:PermissionHelper:1.1.0'
 }

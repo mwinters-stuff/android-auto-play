@@ -34,4 +34,17 @@
     <string name="service_stopped">OBD connection has stopped.</string>
     <string name="notification_label">Tap to open OBD-Reader.</string>
     <string name="notification_action">Tap to open OBD-Reader</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ambient_temperature">Ambient Temperature</string>
+    <string name="bluetooth_status">Bluetooth Status</string>
+    <string name="status_blue_connected">Bluetooth Connected</string>
+    <string name="status_blue_error_connect">Error connecting bluetooth</string>
+    <string name="status_blue_connecting">Bluetooth Connecting</string>
+    <string name="status_blue_disabled">Bluetooth Disabled</string>
+    <string name="status_blue_disconnected_ok">Bluetooth Disconnected Ok</string>
+    <string name="VIN">VIN</string>
+    <string name="speed">Speed</string>
+    <string name="bat_remain">Bat Remain</string>
 </resources>

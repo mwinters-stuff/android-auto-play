@@ -14,6 +14,8 @@ package com.github.pires.obd.commands;
 
 import com.github.pires.obd.enums.AvailableCommandNames;
 
+import java.util.Locale;
+
 /**
  * Current speed.
  *
@@ -78,8 +80,8 @@ public class SpeedCommand extends ObdCommand implements SystemOfUnits {
      * @return a {@link String} object.
      */
     public String getFormattedResult() {
-        return useImperialUnits ? String.format("%.2f%s", getImperialUnit(), getResultUnit())
-                : String.format("%d%s", getMetricSpeed(), getResultUnit());
+      return useImperialUnits ? String.format(Locale.getDefault(), "%.2f%s", getImperialUnit(), getResultUnit())
+          : String.format(Locale.getDefault(), "%d%s", getMetricSpeed(), getResultUnit());
     }
 
     /** {@inheritDoc} */
